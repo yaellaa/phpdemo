@@ -11,7 +11,6 @@
         //echo "USER username is" . $username;
         //echo "USER password is" .$password;
         //echo "USER confirmed password is" .$confirm_password;
-        /*
         if(trim($username) != ""){
             echo "USER username is NOT Empty <br>";
         } else{
@@ -37,8 +36,8 @@
         }
 
     }
-        */
-        test($username);
+
+        //test($username);
 
     function test($fieldName){
         if(trim($fieldName) !=""){
@@ -47,7 +46,16 @@
             echo "field $$fieldName is Empty<br>";
         }
     }
-    }
-        
+    
 
+    if($password ==  $Confirm_Password){
+        //echo "registration Successful";
+        header("location: demo1.php?success=registration successful");
+    }else{
+        //echo "mismatched password";
+        header("location: demo1.php?error=mismatched password");
+        exit;
+    }
+    
+        
 ?>

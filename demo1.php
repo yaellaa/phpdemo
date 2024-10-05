@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <?php if (isset($_GET["error"])){ ?>
+        <p style="background-color: red;"><?php echo $_GET["error"]; ?></p>
+        <?php } ?>
+    </div>
+    <div>
+        <?php if (isset($_GET["success"])) { ?>
+        <p style="background-color: green;"><?php echo $_GET["success"];?></p>
+        <?php }?>
+    </div>
     <form action= "output.php" method="POST">
 
         <div>
